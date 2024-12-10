@@ -62,3 +62,8 @@ button.mark-purchased-btn{
     width: 45px;
     height: auto;
 }
+
+.edit-btn {
+    background-color: darksalmon;
+    border-radius: 5px;
+}
