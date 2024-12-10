@@ -13,7 +13,9 @@ if (itemName) {
       markPurchasedButton.classList.add('mark-purchased-btn');
       markPurchasedButton.addEventListener('click', function() { // Add event listener to the "Mark Purchased" button
       listItem.classList.toggle('purchased');// Toggle the "purchased" class on the list item
-            
+        
+      
+
             
 if (listItem.classList.contains('purchased')) {
       markPurchasedButton.textContent = 'Purchased!';//Button displays the word "Purchased!" once the button is clicked
@@ -35,28 +37,3 @@ document.getElementById('clearList').addEventListener('click', function() {
 document.getElementById('itemsDisplay').innerHTML = '';//Clears the list
 });
 
-function loadList() {
-      const savedItems = JSON.parse(localStorage.getItem('shoppingList')) || [];
-      savedItems.forEach(item => {
-          const listItem = document.createElement('li');
-          const span = document.createElement('span');
-          span.textContent = item.name;
-
-          const markPurchasedButton = document.createElement('button');
-          markPurchasedButton.textContent = item.purchased ? 'Purchased!' : 'Mark Purchased';
-          markPurchasedButton.classList.add('mark-purchased-btn');
-          if (item.purchased) {
-              listItem.classList.add('purchased');
-          }
-
-          markPurchasedButton.addEventListener('click', function () {
-              listItem.classList.toggle('purchased');
-              markPurchasedButton.textContent = listItem.classList.contains('purchased') ? 'Purchased!' : 'Mark Purchased';
-              saveList(); // Save the updated list
-          });
-
-          listItem.appendChild(span);
-          listItem.appendChild(markPurchasedButton);
-          itemsDisplay.appendChild(listItem);
-      });
-  }
