@@ -1,3 +1,59 @@
 body {
     background-color: lightblue;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#addButton {
+    background-color: green; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor:grab; 
+}
+
+#addButton:hover {
+    background-color: darkgreen; 
+}
+
+#clearList {
+    background-color: crimson;
+    color: white;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor:grab;
+}
+
+#clearList:hover {
+    background-color: red;
+}
+
+#itemsInput {
+    background-color:darkgray;
+    color:black;
+    font-size:medium;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+#itemsDisplay li {
+    margin: 10px 10px;
+    padding: left -5000px;;
+    font-size: large;
+}
+
+#itemsDisplay { list-style-type: disc;
+    padding-left: -20000px; 
+    margin-top: 20px;
+
+}
+
+button.mark-purchased-btn{
+    background-color: goldenrod;
+    border-radius: 5px;
+    margin: 5px 10px;
 }
