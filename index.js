@@ -22,7 +22,6 @@ if (listItem.classList.contains('purchased')) {
 }
 });
 
-        
     listItem.appendChild(span);//Appends the span to the list item
     listItem.appendChild(markPurchasedButton);//Appends the "Mark Purchased" button to the list item
     document.getElementById('itemsDisplay').appendChild(listItem);//Appends items added through the input field to the list
