@@ -57,9 +57,8 @@ document.getElementById('addButton').addEventListener('click', function () {
       localStorage.removeItem('shoppingList'); // Clear the saved list
   });
   
-  // Helper function to save the shopping list to localStorage
   function saveList() {
-      const items = [];
+      const items = [];//Array that holds the shopping list items
       document.querySelectorAll('#itemsDisplay li').forEach(item => {
           const itemName = item.querySelector('span').textContent;
           const isPurchased = item.classList.contains('purchased');
